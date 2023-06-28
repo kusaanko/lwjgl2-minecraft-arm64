@@ -35,7 +35,5 @@ export JAVA_HOME_x86_64={Your jdk x64 path}
 export JAVA_HOME_arm64={Your jdk arm64 path}
 export JAVA_HOME={Your jdk ant archtecture path}
 /usr/libexec/java_home -v "Your version"
-ant generate-all
-ant compile
-ant compile_native
+ant
 ```
