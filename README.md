@@ -14,11 +14,28 @@ Website: [http://legacy.lwjgl.org](http://legacy.lwjgl.org)
 Forum: [http://forum.lwjgl.org](http://forum.lwjgl.org)
 Bugs/Suggestions: [https://github.com/LWJGL/lwjgl/issues](https://github.com/LWJGL/lwjgl/issues)
 
+# What is this?
+This is for Minecraft older than 1.7 on Apple Silicon Macs.
+
+This works with arm64 and x86_64 JDK 1.8 and macOS 10.9 or later.
+
+# Environment
+- Xcode
+- JDK 1.8 x86_64 (Zulu is recommended)
+- JDK 1.8 arm64 (Zulu is recommended)
+- ant
+
 Compilation
 -----------
 
 LWJGL requires a JDK and Ant installed to compile, as well as your platforms native compiler to compile the JNI.
 
-* ant generate-all
-* ant compile
-* ant compile_native
+```bash
+export JAVA_HOME_x86_64={Your jdk x64 path}
+export JAVA_HOME_arm64={Your jdk arm64 path}
+export JAVA_HOME={Your jdk ant archtecture path}
+/usr/libexec/java_home -v "Your version"
+ant generate-all
+ant compile
+ant compile_native
+```
